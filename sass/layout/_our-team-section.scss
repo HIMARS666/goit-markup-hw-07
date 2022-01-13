@@ -1,22 +1,10 @@
 /* Наша команда */
-.our-team-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-    background-color: #f5f4fa;
-  }
-  .our-team-list {
-    background: #ffffff;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-  }
-  .our-team {
-    display: flex;
-  }
-  .our-team li:not(:last-child) {
-    margin-right: 30px;
-  }
-  .our-team-title {
+.our-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: #f5f4fa;
+
+  .our-team__title {
     margin-bottom: 50px;
     font-weight: bold;
     font-size: 36px;
@@ -25,13 +13,29 @@
     letter-spacing: 0.03em;
     color: var(--main-text-color);
   }
-  .worker-details {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 32px;
-    padding-right: 32px;
+}
+
+.our-team-list {
+  display: flex;
+
+  .our-team-list__item {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
-  .worker-name {
+}
+
+.worker {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  .worker__name {
     margin-bottom: 10px;
     text-align: center;
     font-weight: 500;
@@ -40,7 +44,7 @@
     letter-spacing: 0.03em;
     color: var(--main-text-color);
   }
-  .proffesion {
+  .worker__proffesion {
     margin-bottom: 16px;
     text-align: center;
     font-size: 16px;
@@ -48,26 +52,32 @@
     letter-spacing: 0.03em;
     color: var(--second-text-color);
   }
-  /* Соц сети */
-  .icons-list {
-    display: flex;
+}
+
+/* Соц сети */
+.icons-list {
+  display: flex;
+}
+
+
+.icons-list__item {
+  &:not(:last-child) {
+    margin-right: 10px;
   }
-  .icons-items a {
-    width: 44px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    fill: #afb1b8;
-    border-radius: 50%;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .icons-items a:hover,
-  .icons-items a:focus {
+  .icons-list__link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #afb1b8;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
     background-color: var(--highlight-color);
     fill: var(--white-color);
   }
-  .icons-list li:not(:last-child) {
-    margin-right: 10px;
-  }
+}
+}
